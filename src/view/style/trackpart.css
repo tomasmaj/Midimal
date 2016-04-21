@@ -1,0 +1,28 @@
+.pane {
+	-fx-background-color: #0f0f0f;
+	-fx-padding: 20px;
+}
+
+.label {
+	-fx-text-fill: white;
+	-fx-font-size: 12px;
+	-fx-font-weight: bold;
+}
+
+.note-off {
+	-fx-background-color: whitesmoke;
+	-fx-opacity: 0.6;
+	-fx-border-width: 2px;
+	-fx-border-color: #0f0f0f;
+}
+
+.note-off:hover {
+	-fx-opacity: 0.7;
+}
+
+.note-on {
+	-fx-background-color: whitesmoke;
+	-fx-opacity: 0.9;
+	-fx-border-width: 2px;
+	-fx-border-color: #0f0f0f;
+}

@@ -1,0 +1,31 @@
+.menu {
+	-fx-background-color: rgb(55,55,55);
+}
+
+.menu-bar {
+	-fx-background-color: rgb(55,55,55);
+}
+
+.menu-item {
+	-fx-background-color: #0f0f0f;
+}
+
+.menu-item:focused {
+	-fx-background-color: rgb(55,55,55);
+}
+
+.label {
+	-fx-text-fill: white;
+}
+
+.label:focused {
+}
+
+.menuitem:hover {
+	-fx-background-color: #0f0f0f;
+}
+
+.context-menu {
+	-fx-background-color: #0f0f0f;
+	-fx-border-color: darkgrey;
+}

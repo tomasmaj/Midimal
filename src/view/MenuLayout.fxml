@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<MenuBar stylesheets="@style/menu.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+  <menus>
+    <Menu mnemonicParsing="false" text="File">
+      <items>
+            <MenuItem fx:id="newSong" mnemonicParsing="false" text="New" />
+            <MenuItem fx:id="openSong" mnemonicParsing="false" text="Open" />
+            <MenuItem fx:id="saveSong" mnemonicParsing="false" text="Save" />
+        <MenuItem fx:id="exit" mnemonicParsing="false" text="Exit" />
+      </items>
+    </Menu>
+      <Menu mnemonicParsing="false" text="Settings">
+        <items>
+          <MenuItem fx:id="displayKeyValue" mnemonicParsing="false" text="Hide key value" />
+            <MenuItem fx:id="soundOnNote" mnemonicParsing="false" text="Enable sound on add note" />
+        </items>
+      </Menu>
+    <Menu mnemonicParsing="false" text="Help">
+      <items>
+        <MenuItem fx:id="gettingStarted" mnemonicParsing="false" text="Getting started" />
+            <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>

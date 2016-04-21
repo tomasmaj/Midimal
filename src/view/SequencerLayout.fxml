@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxWidth="1020.0" minHeight="0.0" minWidth="0.0" prefHeight="720.0" style="-fx-background-color: whitesmoke;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SequencerController">
+	<children>
+		<HBox stylesheets="@style/sequencer.css">
+			<children>
+				<HBox fx:id="trackAll" fillHeight="false" prefHeight="720.0" stylesheets="@style/sequencer.css" translateZ="1.0">
+					<children>
+						<VBox prefWidth="100.0" style="-fx-background-color: black;">
+							<children>
+								<VBox alignment="CENTER" minHeight="176.0" minWidth="100.0">
+									<children>
+										<Label text="Track 1">
+											<styleClass>
+												<String fx:value="trackLB" />
+												<String fx:value="trackOneLB" />
+											</styleClass>
+										</Label>
+										<Button mnemonicParsing="false" onAction="#trackSelect" styleClass="addPart" text="Select Track">
+											<VBox.margin>
+												<Insets top="5.0" />
+											</VBox.margin>
+										</Button>
+									</children>
+									<styleClass>
+										<String fx:value="trackOneSide" />
+										<String fx:value="trackSide" />
+									</styleClass>
+								</VBox>
+								<VBox alignment="CENTER" minHeight="176.0" minWidth="100.0">
+									<children>
+										<Label text="Track 2">
+											<styleClass>
+												<String fx:value="trackLB" />
+												<String fx:value="trackTwoLB" />
+											</styleClass>
+										</Label>
+										<Button mnemonicParsing="false" onAction="#trackSelect" styleClass="addPart" text="Select Track">
+											<VBox.margin>
+												<Insets top="5.0" />
+											</VBox.margin>
+										</Button>
+									</children>
+									<styleClass>
+										<String fx:value="trackTwoSide" />
+										<String fx:value="trackSide" />
+									</styleClass>
+								</VBox>
+								<VBox alignment="CENTER" minHeight="176.0" minWidth="100.0">
+									<children>
+										<Label text="Track 3">
+											<styleClass>
+												<String fx:value="trackLB" />
+												<String fx:value="trackThreeLB" />
+											</styleClass>
+										</Label>
+										<Button mnemonicParsing="false" onAction="#trackSelect" styleClass="addPart" text="Select Track">
+											<VBox.margin>
+												<Insets top="5.0" />
+											</VBox.margin>
+										</Button>
+									</children>
+									<styleClass>
+										<String fx:value="trackThreeSide" />
+										<String fx:value="trackSide" />
+									</styleClass>
+								</VBox>
+								<VBox alignment="CENTER" minHeight="176.0" minWidth="100.0">
+									<children>
+										<Label text="Track 4">
+											<styleClass>
+												<String fx:value="trackLB" />
+												<String fx:value="trackFourLB" />
+											</styleClass>
+										</Label>
+										<Button mnemonicParsing="false" onAction="#trackSelect" styleClass="addPart" text="Select Track">
+											<VBox.margin>
+												<Insets top="5.0" />
+											</VBox.margin>
+										</Button>
+									</children>
+									<styleClass>
+										<String fx:value="trackFourSide" />
+										<String fx:value="trackSide" />
+									</styleClass>
+								</VBox>
+								<HBox alignment="CENTER" prefHeight="17.0" prefWidth="200.0" styleClass="trackSide" />
+							</children>
+						</VBox>
+						<VBox prefWidth="540.0" translateZ="2.0" HBox.hgrow="NEVER">
+							<children>
+								<ScrollPane fitToHeight="true" hbarPolicy="ALWAYS" prefHeight="720.0" prefWidth="540.0" vbarPolicy="NEVER" VBox.vgrow="NEVER">
+									<content>
+										<Pane>
+											<children>
+												<VBox maxHeight="720.0" minHeight="720.0" prefHeight="720.0" styleClass="trackHolder">
+													<children>
+														<HBox fx:id="trackOneSeq" maxHeight="176.0" minHeight="176.0" minWidth="800.0" styleClass="trackOuter" VBox.vgrow="ALWAYS">
+															<padding>
+																<Insets bottom="16.0" top="16.0" />
+															</padding>
+														</HBox>
+														<HBox fx:id="trackTwoSeq" maxHeight="176.0" minHeight="176.0" minWidth="800.0" styleClass="trackInner" VBox.vgrow="ALWAYS">
+															<padding>
+																<Insets bottom="16.0" top="16.0" />
+															</padding>
+														</HBox>
+														<HBox fx:id="trackThreeSeq" maxHeight="176.0" minHeight="176.0" minWidth="800.0" styleClass="trackInner2" VBox.vgrow="ALWAYS">
+															<padding>
+																<Insets bottom="16.0" top="16.0" />
+															</padding>
+														</HBox>
+														<HBox fx:id="trackFourSeq" maxHeight="176.0" minHeight="176.0" minWidth="800.0" styleClass="trackOuter" VBox.vgrow="ALWAYS">
+															<padding>
+																<Insets bottom="16.0" top="16.0" />
+															</padding>
+														</HBox>
+													</children>
+												</VBox>
+												<Line fx:id="line" endX="-1.0" endY="701.0" startX="-1.0" stroke="#ffffff80" strokeWidth="5.0" />
+											</children>
+										</Pane>
+									</content>
+								</ScrollPane>
+							</children>
+						</VBox>
+					</children>
+				</HBox>
+				<AnchorPane minHeight="720.0" minWidth="300.0" prefHeight="720.0" prefWidth="300.0" styleClass="sidebarWrapper" stylesheets="@style/sidebar.css" HBox.hgrow="NEVER">
+					<children>
+						<VBox minHeight="720.0" minWidth="300.0" prefHeight="720.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<children>
+								<HBox alignment="CENTER" spacing="15.0">
+									<children>
+										<Button fx:id="play" mnemonicParsing="false" style="-fx-background-color: green;" styleClass="playBtn" text="Play" />
+										<Button fx:id="stop" mnemonicParsing="false" style="-fx-background-color: rgb(255,0,0);" styleClass="stopBtn" text="Stop" />
+									</children>
+									<padding>
+										<Insets bottom="15.0" />
+									</padding>
+								</HBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label styleClass="tempoLB" text="Tempo" />
+                              <TextField fx:id="tempo" alignment="CENTER" maxWidth="40.0" text="120">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </VBox>
+                        <Separator>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </Separator>
+								<HBox alignment="CENTER" spacing="10.0">
+									<children>
+										<Label fx:id="trackLabel" styleClass="trackSidebarLB" text="Track 1" />
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox alignment="CENTER">
+									<children>
+										<Button mnemonicParsing="false" onAction="#addNewTrackPart" styleClass="addPart" text="Add New Track Part" />
+									</children>
+									<padding>
+										<Insets bottom="15.0" />
+									</padding>
+								</HBox>
+								<VBox alignment="CENTER">
+									<children>
+										<Label styleClass="instrumentLB" text="Instrument">
+											<padding>
+												<Insets bottom="5.0" />
+											</padding>
+										</Label>
+										<ComboBox fx:id="instrumentBox" prefWidth="200.0">
+											<VBox.margin>
+												<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+											</VBox.margin>
+											<items>
+												<FXCollections fx:factory="observableArrayList">
+												</FXCollections>
+											</items>
+										</ComboBox>
+									</children>
+									<padding>
+										<Insets top="10.0" />
+									</padding>
+								</VBox>
+								<VBox alignment="CENTER">
+									<children>
+										<Label styleClass="volumeLB" text="Volume" />
+										<Slider fx:id="volume" blockIncrement="1.0" majorTickUnit="1.0" max="127.0" minorTickCount="1" orientation="VERTICAL" showTickMarks="true" snapToTicks="true">
+											<padding>
+												<Insets left="8.0" />
+											</padding>
+										</Slider>
+										<Label fx:id="volumeValue" alignment="CENTER" contentDisplay="TEXT_ONLY" minWidth="52.0" styleClass="volumeValue" text="0" textAlignment="CENTER">
+											<padding>
+												<Insets bottom="5.0" top="5.0" />
+											</padding>
+										</Label>
+									</children>
+									<padding>
+										<Insets top="20.0" />
+									</padding>
+								</VBox>
+								<HBox alignment="CENTER" spacing="10.0">
+									<children>
+										<Button fx:id="solo" mnemonicParsing="false" prefHeight="20.0" prefWidth="50.0" styleClass="soloBtn-off" text="Solo" />
+										<Button fx:id="mute" mnemonicParsing="false" prefHeight="20.0" prefWidth="50.0" styleClass="muteBtn-off" text="Mute" />
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+							</children>
+							<padding>
+								<Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+							</padding>
+						</VBox>
+					</children>
+				</AnchorPane>
+			</children>
+		</HBox>
+	</children>
+</AnchorPane>
